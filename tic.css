@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.game-container{
+    text-align: center;
+    border: 5px solid #7bcdf4;
+    border-radius: 50px;
+    padding: 20px;
+    background-color: linear-gradient(to right, #090657, #2d2b2a);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+h1{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+    
+}
+.board{
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3,100px);
+    gap: 5px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.cell{
+    width: 100px;
+    height: 100px;
+    background-color: #3bb5ee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+.cell:hover{
+    background-color: #292727;
+}
+.restart-btn {
+    background-color: #ef07c1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+.restart-btn:hover{
+    background-color: white;
+    color: #ef07c1;
+}
+.status {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+  }
