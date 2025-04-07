@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TICTACTOE</title>
+    <link rel="stylesheet" href="tictac.css">
+    <style>
+        body {
+            background-image: url('https://static.vecteezy.com/system/resources/previews/006/241/098/large_2x/abstract-neon-bright-lens-flare-colored-on-black-background-laser-show-colorful-design-for-banners-advertising-technologies-free-photo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        #start-button {
+            font-size: 20px;
+            padding: 15px 30px;
+            cursor: pointer;
+            border: none;
+            background: #ef59ef;
+            color: white;
+            border-radius: 10px;
+            margin-top: 20px;
+            animation: float 2s ease-in-out infinite; /* Floating animation */
+            transition: 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 34, 222, 0.5);
+        }
+
+        #start-button:hover {
+            background: #ff4eca;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>TIC-TAC-TOE</h1>
+        
+        <button id="start-button">Tap to Play</button>
+
+        <div id="game-board" class="board hidden">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <button id="restart-button" class="restart-btn hidden">Restart Game</button>
+        
+        <div id="status" class="status"></div>
+    </div>
+
+    <script>
+        document.getElementById('start-button').addEventListener('click', function () {
+            document.getElementById('game-board').classList.remove('hidden'); // Show board
+            document.getElementById('restart-button').classList.remove('hidden'); // Show restart button
+            this.style.display = 'none'; // Hide "Tap to Play" button
+        });
+    </script>
+
+    <script src="tictac.js"></script>
+</body>
+</html>
